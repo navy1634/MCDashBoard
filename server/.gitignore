@@ -1,1 +1,6 @@
+# folders
 .venv
+notebooks
+
+# files
+*.ipynb
