@@ -2,8 +2,8 @@ import style from '@/styles/style.module.scss';
 
 function Header() {
   return (
-    <div className={style.header_wrapper}>
-      <header>
+    <div>
+      <header className={style.header_wrapper}>
         <div className='header'>
           <img alt='ヘッダー' />
           <div>

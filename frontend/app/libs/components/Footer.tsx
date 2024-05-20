@@ -2,8 +2,8 @@ import style from '@/styles/style.module.scss';
 
 function Footer() {
   return (
-    <div className={style.footer_wrapper}>
-      <footer>
+    <div>
+      <footer className={style.footer_wrapper}>
         <p>フッター</p>
         <div>
           <ul>
@@ -22,5 +22,4 @@ function Footer() {
     </div>
   );
 }
-
 export default Footer;

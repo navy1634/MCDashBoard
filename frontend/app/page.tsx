@@ -1,14 +1,12 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import RootLayout from '@/app/libs/components/layout';
+import style from '@/styles/style.module.scss';
 
-export default function Home() {
+function HomePageIndex() {
   return (
-    <div>
-      <Header />
-      <main>
-        <h1>Hello</h1>
-      </main>
-      <Footer />
-    </div>
+    <RootLayout>
+      <h1 className={style.title}>Start Your MineCraft</h1>
+    </RootLayout>
   );
 }
+
+export default HomePageIndex;
