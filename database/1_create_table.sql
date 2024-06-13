@@ -1,0 +1,15 @@
+CREATE DATABASE IF NOT EXISTS Players;
+use Players;
+
+CREATE TABLE IF NOT EXISTS Players (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+);
+
+CREATE TABLE IF NOT EXISTS SessionTime (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    player_id INT NOT NULL,
+    start_time TIMESTAMP NOT NULL,
+    end_time TIMESTAMP NOT NULL,
+    FOREIGN KEY (player_id) REFERENCES Players(id)
+);

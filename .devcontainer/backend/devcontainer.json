@@ -1,0 +1,26 @@
+{
+  "name": "backend",
+  "dockerComposeFile": [
+    "../../compose.yml",
+    "./compose.devcontainer.yml"
+  ],
+  "service": "backend",
+  "workspaceFolder": "/app",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.mypy-type-checker",
+        "charliermarsh.ruff",
+        "njpwerner.autodocstring",
+        "github.vscode-github-actions",
+        "github.copilot",
+        "tamasfe.even-better-toml",
+        "LittleFoxTeam.vscode-python-test-adapter",
+        "github.copilot",
+        "github.copilot-chat"
+      ]
+    }
+  },
+  "onCreateCommand": "poetry install"
+}

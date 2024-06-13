@@ -1,0 +1,9 @@
+# folders
+.venv
+.mypy_cache
+.pytest_cache
+.venv
+__pycache__
+
+# files
+*.ipynb

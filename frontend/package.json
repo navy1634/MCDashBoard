@@ -12,7 +12,9 @@
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.77.2"
+    "sass": "^1.77.2",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   },
   "devDependencies": {
     "@types/node": "^20",

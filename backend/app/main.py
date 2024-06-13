@@ -1,13 +1,14 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-
-origins = [
-    "http://127.0.0.1:3000",
-    "http://localhost:3000",
-]
+from .api.route import router
 
 app = FastAPI()
+
+origins = [
+    "*",
+]
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -16,13 +17,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-@app.get("/")
-def Hello():
-    return {"Hello": "World!"}
-
-
-if __name__ == "__main__":
-    import uvicorn
-
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+app.include_router(router, prefix="/api")

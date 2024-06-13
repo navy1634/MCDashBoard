@@ -1,0 +1,46 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3032:80
+    volumes:
+      - ./backend:/app
+      - fastapi-sample:/app/.venv
+    working_dir: /app
+    command: bash -c "poetry install && poetry run task dev"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
+    environment:
+      - BACKEND_DOMAIN=fastapi
+    volumes:
+      - ./frontend:/app
+      - nextjs-node-modules:/app/node_modules
+    ports:
+      - 80:3000
+    depends_on:
+      - backend
+    working_dir: /app
+    command: bash -c "npm install && npm run dev"
+  mysql-server:
+    image: mysql:8.0
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=database
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
+      - TZ="Asia/Tokyo"
+    ports:
+      - 3306:3306
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_general_ci --default_authentication_plugin=mysql_native_password
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d # docker-entrypoint-initdb.d内のスクリプトは起動時に1度だけ実行される
+      - mysql-server:/var/lib/mysql
+
+volumes:
+  fastapi-sample:
+  nextjs-node-modules:
+  mysql-server:
