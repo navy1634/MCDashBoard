@@ -1,5 +1,5 @@
-import RootLayout from '@/app/libs/components/layout';
-import style from '@/styles/style.module.scss';
+import RootLayout from '@/app/_components/layouts';
+import style from '@/public/css/style.module.scss';
 
 function HomePageIndex() {
   return (

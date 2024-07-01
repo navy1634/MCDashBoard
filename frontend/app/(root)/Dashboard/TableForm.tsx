@@ -1,17 +1,7 @@
-import connectDatabase from './api/db';
 
-export async function getServerSideProps() {
-  const db = await connectDatabase();
-  const data = await db.all('SELECT * FROM goods');
-  return {
-    props: { data },
-  };
-}
-
-function TableForm(props: any) {
-  
+function TableForm() {
   return (
-    <div>
+    <>
       <table>
         <tr>
           <td>監視先URL</td>
@@ -26,7 +16,7 @@ function TableForm(props: any) {
           <td id='ping'></td>
         </tr>
       </table>
-    </div>
+    </>
   );
 }
 
