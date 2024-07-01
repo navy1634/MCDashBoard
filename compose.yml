@@ -44,3 +44,4 @@ volumes:
   fastapi-sample:
   nextjs-node-modules:
   mysql-server:
+  

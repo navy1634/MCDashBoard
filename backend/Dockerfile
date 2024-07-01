@@ -16,4 +16,4 @@ COPY --from=deps /app/requirements.txt /app
 RUN pip3 install --no-cache-dir --upgrade -r /app/requirements.txt
 COPY ./app /app/app
 
-CMD uvicorn app.app:app --proxy-headers --host 0.0.0.0 --port 80
+CMD uvicorn app.main:app --proxy-headers --host 0.0.0.0 --port 80 --reload

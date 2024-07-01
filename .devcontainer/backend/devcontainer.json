@@ -14,7 +14,6 @@
         "charliermarsh.ruff",
         "njpwerner.autodocstring",
         "github.vscode-github-actions",
-        "github.copilot",
         "tamasfe.even-better-toml",
         "LittleFoxTeam.vscode-python-test-adapter",
         "github.copilot",

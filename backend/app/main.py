@@ -1,12 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from .api.route import router
+from .api.presentation.route import router
 
 app = FastAPI()
 
 origins = [
     "*",
+    "127.0.0.1"
 ]
 
 app.add_middleware(
