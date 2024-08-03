@@ -14,11 +14,27 @@
         "charliermarsh.ruff",
         "njpwerner.autodocstring",
         "github.vscode-github-actions",
-        "tamasfe.even-better-toml",
-        "LittleFoxTeam.vscode-python-test-adapter",
         "github.copilot",
-        "github.copilot-chat"
-      ]
+        "github.copilot-chat",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "[python]": {
+          "diffEditor.ignoreTrimWhitespace": false,
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+          },
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true,
+          "editor.formatOnType": true,
+          "editor.wordBasedSuggestions": "off"
+        },
+        "python.analysis.autoFormatStrings": true,
+        "python.analysis.extraPaths": [],
+        "python.analysis.typeCheckingMode": "basic",
+        "python.autoComplete.extraPaths": [],
+        "ruff.organizeImports": false
+      }
     }
   },
   "onCreateCommand": "poetry install"

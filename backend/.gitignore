@@ -4,6 +4,7 @@
 .pytest_cache
 .venv
 __pycache__
+scrap/
 
 # files
 *.ipynb

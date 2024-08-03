@@ -14,8 +14,36 @@
         "stylelint.vscode-stylelint",
         "mrmlnc.vscode-scss",
         "github.copilot",
-        "github.copilot-chat"
-      ]
+        "github.copilot-chat",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "[css]": {
+          "editor.tabSize": 2
+        },
+        "[html]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode",
+          "editor.tabSize": 2
+        },
+        "[javascript]": {
+          "editor.tabSize": 2
+        },
+        "[javascriptreact]": {
+          "editor.tabSize": 2
+        },
+        "[scss]": {
+          "editor.tabSize": 2
+        },
+        "[typescript]": {
+          "editor.tabSize": 2
+        },
+        "[typescriptreact]": {
+          "editor.tabSize": 2,
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "prettier.singleQuote": true,
+        "editor.formatOnSave": true
+      }
     }
   },
   "onCreateCommand": "npm install"
