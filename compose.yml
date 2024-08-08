@@ -8,6 +8,10 @@ services:
     volumes:
       - ./backend:/app
       - fastapi-sample:/app/.venv
+    environment:
+      - POSTGRES_DATABASE=pokemon
+      - POSTGRES_USER=pokemon
+      - POSTGRES_PASSWORD=password
     working_dir: /app
     command: bash -c "poetry install && poetry run task dev"
   frontend:
@@ -29,7 +33,7 @@ services:
     image: postgres:latest
     environment:
       - POSTGRES_DATABASE=pokemon
-      - POSTGRES_USER=user
+      - POSTGRES_USER=pokemon
       - POSTGRES_PASSWORD=password
     ports:
       - 5432:5432

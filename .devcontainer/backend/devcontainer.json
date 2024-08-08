@@ -10,7 +10,9 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
+        "ms-python.black-formatter",
         "ms-python.mypy-type-checker",
+        "ms-python.isort",
         "charliermarsh.ruff",
         "njpwerner.autodocstring",
         "github.vscode-github-actions",

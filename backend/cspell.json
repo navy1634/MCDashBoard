@@ -5,8 +5,16 @@
     "dictionaries": [],
     "words": [
         "autoflush",
+        "chartjs",
+        "noopener",
+        "noreferrer",
+        "pkstatus",
+        "plusplus",
         "psycopg",
-        "usecase"
+        "subinfo",
+        "tailwindcss",
+        "usecase",
+        "uvicorn"
     ],
     "ignoreWords": [],
     "import": []
